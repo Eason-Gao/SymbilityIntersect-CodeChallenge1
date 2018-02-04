@@ -1,15 +1,13 @@
 package com.project.eason.cryptocharts.viewmodel;
 
 import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProvider;
-import android.view.View;
 
 import com.project.eason.cryptocharts.repository.CryptoCurrencyRepository;
 
 import javax.inject.Inject;
 
 /**
- * Created by Eason on 2018-02-03.
+ * View Model which handles currency data
  */
 
 public class CryptoCurrencyViewModel extends ViewModel

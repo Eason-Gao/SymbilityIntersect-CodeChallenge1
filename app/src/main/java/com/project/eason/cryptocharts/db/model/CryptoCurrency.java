@@ -5,17 +5,16 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
 
 import java.io.Serializable;
-
-import io.reactivex.annotations.NonNull;
 
 /**
  * Table for cryptocurrencies
  */
 
-@Entity(tableName = "dog",
-    indices = {@Index(value = {"dog_id"},
+@Entity(tableName = "CryptoCurrencies",
+    indices = {@Index(value = {"currency_id"},
 	unique = true)})
 
 public class CryptoCurrency implements Serializable
@@ -40,6 +39,8 @@ public class CryptoCurrency implements Serializable
     public CryptoCurrency(){}
 
     public CryptoCurrency(String id, Double price, Double volume) {
+        super();
+
         this.id = id;
         this.price = price;
         this.volume = volume;
@@ -74,5 +75,15 @@ public class CryptoCurrency implements Serializable
     public void setFavourite(Boolean favourite)
     {
 	isFavourite = favourite;
+    }
+
+    public Double getPrice()
+    {
+        return price;
+    }
+
+    public void setPrice(Double price)
+    {
+        this.price = price;
     }
 }

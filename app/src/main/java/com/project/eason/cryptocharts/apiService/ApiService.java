@@ -1,11 +1,11 @@
 package com.project.eason.cryptocharts.apiService;
 
-import com.project.eason.cryptocharts.db.dao.CurrencyDao;
 import com.project.eason.cryptocharts.db.model.CryptoCurrency;
 
-import retrofit2.Call;
-import retrofit2.http.Body;
-import retrofit2.http.POST;
+import java.util.List;
+
+import retrofit2.Callback;
+import retrofit2.http.GET;
 
 /**
  * ApiService
@@ -13,6 +13,6 @@ import retrofit2.http.POST;
 
 public interface ApiService
 {
-    @POST("endpoint")
-    Call<CurrencyDao>  getCurrency(@Body CryptoCurrency cryptoCurrency);
+    @GET("data/all/coinlist")
+    void getCurrency(Callback<List<CryptoCurrency>> cb);
 }

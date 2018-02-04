@@ -10,6 +10,7 @@ import dagger.Module;
 import dagger.Provides;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
  * ApiModule
@@ -18,6 +19,13 @@ import retrofit2.Retrofit;
 @Module
 public class ApiModule
 {
+    String mBAseUrl;
+
+    public ApiModule(String baseUrl)
+    {
+        this.mBAseUrl = baseUrl;
+    }
+
     @Provides
     @Singleton
     ApiService providesApiService()
@@ -26,6 +34,7 @@ public class ApiModule
 
 	return new Retrofit.Builder().baseUrl("https://min-api.cryptocompare.com/")
 	    .client(httpClient.build())
+	    .addConverterFactory(GsonConverterFactory.create())
 	    .build()
 	    .create(ApiService.class);
     }
