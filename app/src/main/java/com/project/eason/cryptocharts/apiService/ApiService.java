@@ -1,10 +1,13 @@
 package com.project.eason.cryptocharts.apiService;
 
-import com.project.eason.cryptocharts.db.model.CryptoCurrency;
+import com.google.gson.JsonElement;
 
-import java.util.List;
+import com.project.eason.cryptocharts.db.model.MainPojo;
 
-import retrofit2.Callback;
+import org.json.JSONObject;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
 import retrofit2.http.GET;
 
 /**
@@ -14,5 +17,5 @@ import retrofit2.http.GET;
 public interface ApiService
 {
     @GET("data/all/coinlist")
-    void getCurrency(Callback<List<CryptoCurrency>> cb);
+    Call<ResponseBody> getCurrency();
 }

@@ -2,7 +2,10 @@ package com.project.eason.cryptocharts.module;
 
 import com.project.eason.cryptocharts.apiService.ApiService;
 import com.project.eason.cryptocharts.repository.CryptoCurrencyRepository;
-import com.project.eason.cryptocharts.viewmodel.CurrencyVIewModelFactory;
+import com.project.eason.cryptocharts.viewmodel.CurrencyViewModelFactory;
+
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 import javax.inject.Singleton;
 
@@ -13,15 +16,15 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * ApiModule
+ * AppModule
  */
 
 @Module
-public class ApiModule
+public class AppModule
 {
     String mBAseUrl;
 
-    public ApiModule(String baseUrl)
+    public AppModule(String baseUrl)
     {
         this.mBAseUrl = baseUrl;
     }
@@ -32,17 +35,18 @@ public class ApiModule
     {
 	final OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 
-	return new Retrofit.Builder().baseUrl("https://min-api.cryptocompare.com/")
+	return new Retrofit.Builder().baseUrl(mBAseUrl)
 	    .client(httpClient.build())
 	    .addConverterFactory(GsonConverterFactory.create())
+	    .callbackExecutor(Executors.newSingleThreadExecutor())
 	    .build()
 	    .create(ApiService.class);
     }
 
     @Provides
     @Singleton
-    CurrencyVIewModelFactory providesCurrencyViewModelFactory(CryptoCurrencyRepository cryptoCurrencyRepository)
+    CurrencyViewModelFactory providesCurrencyViewModelFactory(CryptoCurrencyRepository cryptoCurrencyRepository)
     {
-        return new CurrencyVIewModelFactory(cryptoCurrencyRepository);
+        return new CurrencyViewModelFactory(cryptoCurrencyRepository);
     }
 }

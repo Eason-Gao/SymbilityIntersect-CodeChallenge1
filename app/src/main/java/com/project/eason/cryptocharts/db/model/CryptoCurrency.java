@@ -14,15 +14,15 @@ import java.io.Serializable;
  */
 
 @Entity(tableName = "CryptoCurrencies",
-    indices = {@Index(value = {"currency_id"},
+    indices = {@Index(value = {"CoinName"},
 	unique = true)})
 
 public class CryptoCurrency implements Serializable
 {
     @PrimaryKey
-    @ColumnInfo(name = "currency_id")
+    @ColumnInfo(name = "CoinName")
     @NonNull
-    private String id;
+    private String coinName;
 
     @ColumnInfo(name = "currency_price")
     private Double price;
@@ -38,23 +38,23 @@ public class CryptoCurrency implements Serializable
     @Ignore
     public CryptoCurrency(){}
 
-    public CryptoCurrency(String id, Double price, Double volume) {
+    public CryptoCurrency(String coinName, Double price, Double volume) {
         super();
 
-        this.id = id;
+        this.coinName = coinName;
         this.price = price;
         this.volume = volume;
         this.isFavourite = false;
     }
 
-    public String getId()
+    public String getCoinName()
     {
-	return id;
+	return coinName;
     }
 
-    public void setId(String id)
+    public void setCoinName(String coinName)
     {
-	this.id = id;
+	this.coinName = coinName;
     }
 
     public Double getVolume()

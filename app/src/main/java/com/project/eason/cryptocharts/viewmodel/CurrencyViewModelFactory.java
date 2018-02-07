@@ -10,12 +10,13 @@ import javax.inject.Inject;
  * Factory class for currency view model
  */
 
-public class CurrencyVIewModelFactory implements ViewModelProvider.Factory
+public class CurrencyViewModelFactory implements ViewModelProvider.Factory
 {
+
     private CryptoCurrencyRepository cryptoCurrencyRepository;
 
     @Inject
-    public CurrencyVIewModelFactory(CryptoCurrencyRepository cryptoCurrencyRepository)
+    public CurrencyViewModelFactory(CryptoCurrencyRepository cryptoCurrencyRepository)
     {
         this.cryptoCurrencyRepository = cryptoCurrencyRepository;
     }

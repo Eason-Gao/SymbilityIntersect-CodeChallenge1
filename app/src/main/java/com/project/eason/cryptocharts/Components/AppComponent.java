@@ -1,7 +1,9 @@
 package com.project.eason.cryptocharts.Components;
 
-import com.project.eason.cryptocharts.MainActivity;
-import com.project.eason.cryptocharts.module.ApiModule;
+import com.project.eason.cryptocharts.activity.MainActivity;
+import com.project.eason.cryptocharts.activity.SplashActivity;
+import com.project.eason.cryptocharts.module.AppModule;
+import com.project.eason.cryptocharts.module.RoomModule;
 
 import javax.inject.Singleton;
 
@@ -12,8 +14,10 @@ import dagger.Component;
  */
 
 @Singleton
-@Component(modules = {ApiModule.class})
+@Component(modules = {AppModule.class, RoomModule.class})
 public interface AppComponent
 {
     void inject(MainActivity mainActivity);
+
+    void inject(SplashActivity splashActivity);
 }
