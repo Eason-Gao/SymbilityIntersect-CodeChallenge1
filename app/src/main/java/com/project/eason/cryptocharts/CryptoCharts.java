@@ -26,7 +26,8 @@ public class CryptoCharts extends Application
 	    .build();
     }
 
-    public AppComponent getAppComponent() {
-        return appComponent;
+    public AppComponent getAppComponent()
+    {
+	return appComponent;
     }
 }

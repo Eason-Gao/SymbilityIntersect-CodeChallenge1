@@ -27,8 +27,9 @@ public class SplashActivity extends AppCompatActivity
     private CryptoCurrencyViewModel cryptoCurrencyViewModel;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle savedInstanceState)
+    {
+	super.onCreate(savedInstanceState);
 
 	((CryptoCharts) getApplication()).getAppComponent().inject(this);
 	setContentView(R.layout.activity_splash);

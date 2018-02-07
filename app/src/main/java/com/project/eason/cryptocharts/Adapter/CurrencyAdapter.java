@@ -24,7 +24,7 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHo
 
     public CurrencyAdapter(List<CryptoCurrency> currencies)
     {
-        this.currencies = currencies;
+	this.currencies = currencies;
     }
 
     @Override
@@ -37,7 +37,7 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHo
     @Override
     public void onBindViewHolder(CurrencyAdapter.ViewHolder holder, int position)
     {
-        holder.currencyName.setText(currencies.get(position).getCoinName());
+	holder.currencyName.setText(currencies.get(position).getCoinName());
     }
 
     @Override
@@ -48,7 +48,7 @@ public class CurrencyAdapter extends RecyclerView.Adapter<CurrencyAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder
     {
-        @BindView(R.id.currency_name)
+	@BindView(R.id.currency_name)
 	TextView currencyName;
 
 	public ViewHolder(View itemView)

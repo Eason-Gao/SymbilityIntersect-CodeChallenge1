@@ -69,123 +69,153 @@ public class CurrencyAPIPojo
     @Expose
     private Boolean sponsored;
 
-    public String getId() {
+    public String getId()
+    {
 	return id;
     }
 
-    public void setId(String id) {
+    public void setId(String id)
+    {
 	this.id = id;
     }
 
-    public String getUrl() {
+    public String getUrl()
+    {
 	return url;
     }
 
-    public void setUrl(String url) {
+    public void setUrl(String url)
+    {
 	this.url = url;
     }
 
-    public String getImageUrl() {
+    public String getImageUrl()
+    {
 	return imageUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
+    public void setImageUrl(String imageUrl)
+    {
 	this.imageUrl = imageUrl;
     }
 
-    public String getName() {
+    public String getName()
+    {
 	return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
 	this.name = name;
     }
 
-    public String getSymbol() {
+    public String getSymbol()
+    {
 	return symbol;
     }
 
-    public void setSymbol(String symbol) {
+    public void setSymbol(String symbol)
+    {
 	this.symbol = symbol;
     }
 
-    public String getCoinName() {
+    public String getCoinName()
+    {
 	return coinName;
     }
 
-    public void setCoinName(String coinName) {
+    public void setCoinName(String coinName)
+    {
 	this.coinName = coinName;
     }
 
-    public String getFullName() {
+    public String getFullName()
+    {
 	return fullName;
     }
 
-    public void setFullName(String fullName) {
+    public void setFullName(String fullName)
+    {
 	this.fullName = fullName;
     }
 
-    public String getAlgorithm() {
+    public String getAlgorithm()
+    {
 	return algorithm;
     }
 
-    public void setAlgorithm(String algorithm) {
+    public void setAlgorithm(String algorithm)
+    {
 	this.algorithm = algorithm;
     }
 
-    public String getProofType() {
+    public String getProofType()
+    {
 	return proofType;
     }
 
-    public void setProofType(String proofType) {
+    public void setProofType(String proofType)
+    {
 	this.proofType = proofType;
     }
 
-    public String getFullyPremined() {
+    public String getFullyPremined()
+    {
 	return fullyPremined;
     }
 
-    public void setFullyPremined(String fullyPremined) {
+    public void setFullyPremined(String fullyPremined)
+    {
 	this.fullyPremined = fullyPremined;
     }
 
-    public String getTotalCoinSupply() {
+    public String getTotalCoinSupply()
+    {
 	return totalCoinSupply;
     }
 
-    public void setTotalCoinSupply(String totalCoinSupply) {
+    public void setTotalCoinSupply(String totalCoinSupply)
+    {
 	this.totalCoinSupply = totalCoinSupply;
     }
 
-    public String getPreMinedValue() {
+    public String getPreMinedValue()
+    {
 	return preMinedValue;
     }
 
-    public void setPreMinedValue(String preMinedValue) {
+    public void setPreMinedValue(String preMinedValue)
+    {
 	this.preMinedValue = preMinedValue;
     }
 
-    public String getTotalCoinsFreeFloat() {
+    public String getTotalCoinsFreeFloat()
+    {
 	return totalCoinsFreeFloat;
     }
 
-    public void setTotalCoinsFreeFloat(String totalCoinsFreeFloat) {
+    public void setTotalCoinsFreeFloat(String totalCoinsFreeFloat)
+    {
 	this.totalCoinsFreeFloat = totalCoinsFreeFloat;
     }
 
-    public String getSortOrder() {
+    public String getSortOrder()
+    {
 	return sortOrder;
     }
 
-    public void setSortOrder(String sortOrder) {
+    public void setSortOrder(String sortOrder)
+    {
 	this.sortOrder = sortOrder;
     }
 
-    public Boolean getSponsored() {
+    public Boolean getSponsored()
+    {
 	return sponsored;
     }
 
-    public void setSponsored(Boolean sponsored) {
+    public void setSponsored(Boolean sponsored)
+    {
 	this.sponsored = sponsored;
     }
 

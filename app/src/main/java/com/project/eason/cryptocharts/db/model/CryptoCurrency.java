@@ -36,15 +36,18 @@ public class CryptoCurrency implements Serializable
     private Boolean isFavourite;
 
     @Ignore
-    public CryptoCurrency(){}
+    public CryptoCurrency()
+    {
+    }
 
-    public CryptoCurrency(String coinName, Double price, Double volume) {
-        super();
+    public CryptoCurrency(String coinName, Double price, Double volume)
+    {
+	super();
 
-        this.coinName = coinName;
-        this.price = price;
-        this.volume = volume;
-        this.isFavourite = false;
+	this.coinName = coinName;
+	this.price = price;
+	this.volume = volume;
+	this.isFavourite = false;
     }
 
     public String getCoinName()
@@ -79,11 +82,11 @@ public class CryptoCurrency implements Serializable
 
     public Double getPrice()
     {
-        return price;
+	return price;
     }
 
     public void setPrice(Double price)
     {
-        this.price = price;
+	this.price = price;
     }
 }

@@ -22,20 +22,22 @@ public class RoomModule
     private CryptoCurrencyDatabase cryptoCurrencyDatabase;
 
 
-    public RoomModule(Application mApplication) {
-        cryptoCurrencyDatabase = Room.databaseBuilder(mApplication, CryptoCurrencyDatabase.class, "CryptoCharts").allowMainThreadQueries().build();
+    public RoomModule(Application mApplication)
+    {
+	cryptoCurrencyDatabase = Room.databaseBuilder(mApplication, CryptoCurrencyDatabase.class, "CryptoCharts").allowMainThreadQueries().build();
     }
 
     @Singleton
     @Provides
-    CryptoCurrencyDatabase providesCryptoCurrencyDatabase() {
-        return cryptoCurrencyDatabase;
+    CryptoCurrencyDatabase providesCryptoCurrencyDatabase()
+    {
+	return cryptoCurrencyDatabase;
     }
 
     @Singleton
     @Provides
     CurrencyDao providesCurrencyDao(CryptoCurrencyDatabase cryptoCurrencyDatabase)
     {
-        return cryptoCurrencyDatabase.getCurrencyDao();
+	return cryptoCurrencyDatabase.getCurrencyDao();
     }
 }

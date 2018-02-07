@@ -17,11 +17,11 @@ public class DataPojo
 
     public ArrayList<CurrencyAPIPojo> getCurrencyAPIPojo()
     {
-        return currencyAPIPojo;
+	return currencyAPIPojo;
     }
 
     public void setCurrencyAPIPojo(ArrayList<CurrencyAPIPojo> currencyAPIPojo)
     {
-        this.currencyAPIPojo = currencyAPIPojo;
+	this.currencyAPIPojo = currencyAPIPojo;
     }
 }

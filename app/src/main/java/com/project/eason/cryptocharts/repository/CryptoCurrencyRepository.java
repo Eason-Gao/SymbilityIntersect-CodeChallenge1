@@ -1,14 +1,7 @@
 package com.project.eason.cryptocharts.repository;
 
-import static android.content.ContentValues.TAG;
-
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
-import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 
 import com.project.eason.cryptocharts.apiService.ApiService;
@@ -16,7 +9,6 @@ import com.project.eason.cryptocharts.db.dao.CurrencyDao;
 import com.project.eason.cryptocharts.db.model.CryptoCurrency;
 import com.project.eason.utils.ApiUtil;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -33,20 +25,23 @@ import retrofit2.Response;
  * Repository for inserting/updating currencies
  */
 
-public class CryptoCurrencyRepository{
+public class CryptoCurrencyRepository
+{
 
-    @Inject ApiService apiService;
+    @Inject
+    ApiService apiService;
 
     private final CurrencyDao currencyDao;
 
     @Inject
-    public CryptoCurrencyRepository(CurrencyDao currencyDao){
-        this.currencyDao = currencyDao;
+    public CryptoCurrencyRepository(CurrencyDao currencyDao)
+    {
+	this.currencyDao = currencyDao;
     }
 
-    public void insertCurrencytoDb (CryptoCurrency cryptoCurrency)
+    public void insertCurrencytoDb(CryptoCurrency cryptoCurrency)
     {
-        currencyDao.insertAllCurrencies(cryptoCurrency);
+	currencyDao.insertAllCurrencies(cryptoCurrency);
     }
 
     public MutableLiveData<List<CryptoCurrency>> getCryptoCurrencyListFromDB()
@@ -58,7 +53,8 @@ public class CryptoCurrencyRepository{
 	return data;
     }
 
-    public void getCryptoCurrencyList(){
+    public void getCryptoCurrencyList()
+    {
 
 	Call<ResponseBody> call = apiService.getCurrency();
 
@@ -69,8 +65,7 @@ public class CryptoCurrencyRepository{
 	    @Override
 	    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response)
 	    {
-	        if(response.isSuccessful())
-		{
+		if (response.isSuccessful()) {
 		    // the response body returns currencies as a data class instead of a array so some parsing needed to be done
 		    Set<Map.Entry<String, JsonElement>> entries = ApiUtil.convertToMap(response);
 

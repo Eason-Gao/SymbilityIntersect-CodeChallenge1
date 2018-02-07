@@ -1,11 +1,8 @@
 package com.project.eason.cryptocharts.db;
 
 import android.arch.persistence.room.Database;
-
-import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.arch.persistence.room.TypeConverters;
-import android.content.Context;
 
 import com.project.eason.cryptocharts.db.dao.CurrencyDao;
 import com.project.eason.cryptocharts.db.model.CryptoCurrency;

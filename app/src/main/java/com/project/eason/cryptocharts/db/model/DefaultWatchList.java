@@ -1,8 +1,5 @@
 package com.project.eason.cryptocharts.db.model;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
 /**
  * Watchlist Pojo
  */
@@ -13,22 +10,22 @@ public class DefaultWatchList
 
     private String Sponsored;
 
-    public String getCoinIs ()
+    public String getCoinIs()
     {
 	return CoinIs;
     }
 
-    public void setCoinIs (String CoinIs)
+    public void setCoinIs(String CoinIs)
     {
 	this.CoinIs = CoinIs;
     }
 
-    public String getSponsored ()
+    public String getSponsored()
     {
 	return Sponsored;
     }
 
-    public void setSponsored (String Sponsored)
+    public void setSponsored(String Sponsored)
     {
 	this.Sponsored = Sponsored;
     }
@@ -36,6 +33,6 @@ public class DefaultWatchList
     @Override
     public String toString()
     {
-	return "ClassPojo [CoinIs = "+CoinIs+", Sponsored = "+Sponsored+"]";
+	return "ClassPojo [CoinIs = " + CoinIs + ", Sponsored = " + Sponsored + "]";
     }
 }

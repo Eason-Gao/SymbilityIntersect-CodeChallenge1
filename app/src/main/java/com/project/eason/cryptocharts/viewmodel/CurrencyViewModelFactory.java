@@ -18,11 +18,12 @@ public class CurrencyViewModelFactory implements ViewModelProvider.Factory
     @Inject
     public CurrencyViewModelFactory(CryptoCurrencyRepository cryptoCurrencyRepository)
     {
-        this.cryptoCurrencyRepository = cryptoCurrencyRepository;
+	this.cryptoCurrencyRepository = cryptoCurrencyRepository;
     }
 
     @Override
-    public CryptoCurrencyViewModel create(Class modelClass) {
-        return new CryptoCurrencyViewModel(cryptoCurrencyRepository);
+    public CryptoCurrencyViewModel create(Class modelClass)
+    {
+	return new CryptoCurrencyViewModel(cryptoCurrencyRepository);
     }
 }

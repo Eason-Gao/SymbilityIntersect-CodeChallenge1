@@ -4,7 +4,6 @@ import com.project.eason.cryptocharts.apiService.ApiService;
 import com.project.eason.cryptocharts.repository.CryptoCurrencyRepository;
 import com.project.eason.cryptocharts.viewmodel.CurrencyViewModelFactory;
 
-import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
 import javax.inject.Singleton;
@@ -26,7 +25,7 @@ public class AppModule
 
     public AppModule(String baseUrl)
     {
-        this.mBAseUrl = baseUrl;
+	this.mBAseUrl = baseUrl;
     }
 
     @Provides
@@ -47,6 +46,6 @@ public class AppModule
     @Singleton
     CurrencyViewModelFactory providesCurrencyViewModelFactory(CryptoCurrencyRepository cryptoCurrencyRepository)
     {
-        return new CurrencyViewModelFactory(cryptoCurrencyRepository);
+	return new CurrencyViewModelFactory(cryptoCurrencyRepository);
     }
 }

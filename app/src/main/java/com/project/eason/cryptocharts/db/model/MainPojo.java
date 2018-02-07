@@ -3,8 +3,6 @@ package com.project.eason.cryptocharts.db.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-
 /**
  * Created by Eason on 2018-02-04.
  */
@@ -35,51 +33,63 @@ public class MainPojo
     @Expose
     private DataPojo data;
 
-    public String getResponse() {
+    public String getResponse()
+    {
 	return response;
     }
 
-    public void setResponse(String response) {
+    public void setResponse(String response)
+    {
 	this.response = response;
     }
 
-    public String getMessage() {
+    public String getMessage()
+    {
 	return message;
     }
 
-    public void setMessage(String message) {
+    public void setMessage(String message)
+    {
 	this.message = message;
     }
 
-    public String getBaseImageUrl() {
+    public String getBaseImageUrl()
+    {
 	return baseImageUrl;
     }
 
-    public void setBaseImageUrl(String baseImageUrl) {
+    public void setBaseImageUrl(String baseImageUrl)
+    {
 	this.baseImageUrl = baseImageUrl;
     }
 
-    public String getBaseLinkUrl() {
+    public String getBaseLinkUrl()
+    {
 	return baseLinkUrl;
     }
 
-    public void setBaseLinkUrl(String baseLinkUrl) {
+    public void setBaseLinkUrl(String baseLinkUrl)
+    {
 	this.baseLinkUrl = baseLinkUrl;
     }
 
-    public DefaultWatchList getDefaultWatchlist() {
+    public DefaultWatchList getDefaultWatchlist()
+    {
 	return defaultWatchlist;
     }
 
-    public void setDefaultWatchlist(DefaultWatchList defaultWatchlist) {
+    public void setDefaultWatchlist(DefaultWatchList defaultWatchlist)
+    {
 	this.defaultWatchlist = defaultWatchlist;
     }
 
-    public DataPojo getData() {
+    public DataPojo getData()
+    {
 	return data;
     }
 
-    public void setData(DataPojo data) {
+    public void setData(DataPojo data)
+    {
 	this.data = data;
     }
 }
